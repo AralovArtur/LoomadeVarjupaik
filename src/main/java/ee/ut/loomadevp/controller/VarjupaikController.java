@@ -1,6 +1,6 @@
-package com.loomadevp.loomadevp.controller;
+package ee.ut.loomadevp.controller;
 
-import com.loomadevp.loomadevp.repository.AnimalRepository;
+import ee.ut.loomadevp.repository.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;

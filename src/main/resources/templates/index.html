@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:lang="#{lang.code}">
+<html xmlns:th="http://www.thymeleaf.org"
+      th:lang="#{lang-code}">
 <head>
     <meta charset="UTF-8">
     <title>Loomade varjupaik</title>
@@ -12,11 +13,11 @@
     </a>
 
     <a class="phone" href="tel:+37255555555">(+372) 55555555</a>
-    <a class="en" href="/?lang=en" th:text="#{lang.en}">ENG</a>
-    <a class="en" href="/?lang=et" th:text="#{lang.et}">EST</a>
+    <a class="en" href="/?lang=en" th:text="#{lang-en}"></a>
+    <a class="en" href="/?lang=et" th:text="#{lang-et}"></a>
 
     <div class="menu">
-        <a href="/loomadvp" class="button" th:text="#{loomad.varjupaigas}"></a>
+        <a href="/loomadvp" class="button" th:text="#{loomad-varjupaigas}"></a>
         <a href="/viiols" class="button">Vii oma loom siia</a>
         <a href="/kontakt" class="button">Kontakt</a>
     </div>

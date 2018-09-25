@@ -1,4 +1,4 @@
-package com.loomadevp.loomadevp;
+package ee.ut.loomadevp;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.loomadevp.loomadevp.model;
+package ee.ut.loomadevp.model;
 
 import lombok.Getter;
 import lombok.Setter;
