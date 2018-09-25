@@ -3,13 +3,15 @@ package com.loomadevp.loomadevp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 import java.util.Locale;
 
 @SpringBootApplication
-public class LoomadevpApplication {
+public class LoomadevpApplication implements WebMvcConfigurer {
 
     public static void main(String[] args) {
         SpringApplication.run(LoomadevpApplication.class, args);
@@ -26,5 +28,10 @@ public class LoomadevpApplication {
         LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
         lci.setParamName("lang");
         return lci;
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(localeChangeInterceptor());
     }
 }

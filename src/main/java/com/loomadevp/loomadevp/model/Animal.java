@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Getter
 @Setter
-@Table(name = "Loomad")
+@Table(name = "loomad")
 
 public class Animal {
     @Id
