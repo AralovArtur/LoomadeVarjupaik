@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Loomad varjupaigas</title>
@@ -14,6 +14,9 @@
     <div class="menu">
         <a href="/loomadvp" class="button">Loomad varjupaigas</a>
     </div>
+</div><br/><br/><br/>
+<div class="list">
+    <li th:each="loom : ${loomad}" th:text="${loom}"></li>
 </div>
 </body>
 </html>

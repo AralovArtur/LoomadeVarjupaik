@@ -87,3 +87,10 @@ body {
     border: 3px solid darkslateblue;
     padding: 10px;
 }
+
+.list {
+    background-color: ghostwhite;
+    margin: auto;
+    border: 3px solid darkslateblue;
+    padding: 10px;
+}

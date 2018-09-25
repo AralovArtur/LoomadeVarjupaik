@@ -28,6 +28,12 @@ public class VarjupaikController {
         return "all";
     }
 
+    @RequestMapping(path = "/loomadvp", method = RequestMethod.GET)
+    public String showAllLoomad(Model model) {
+        model.addAttribute("loomad", animalRepository.findAll());
+        return "loomad vp";
+    }
+
     @RequestMapping(path = "/viiols", method = RequestMethod.POST)
     public String reg(HttpServletRequest request, Model model) {
         final String sql = "INSERT INTO Loomad (liik, vanus, linn) VALUES (?, ?, ?)";
@@ -46,11 +52,6 @@ public class VarjupaikController {
     @RequestMapping(path = "/avaleht", method = RequestMethod.GET)
     public String avaleht() {
         return "index";
-    }
-
-    @RequestMapping(path = "/loomadvp", method = RequestMethod.GET)
-    public String loomadVP() {
-        return "loomad vp";
     }
 
     @RequestMapping(path = "/viiols", method = RequestMethod.GET)
