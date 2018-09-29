@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      th:lang="#{lang-code}">
 <head>
     <meta charset="UTF-8">
     <title>Vii oma loom siia</title>
@@ -9,21 +10,21 @@
 <body>
 <div class="header">
     <a class="logo" href="/avaleht" title="Avaleht">
-        <img src="https://cdn.icon-icons.com/icons2/38/PNG/512/sheep_animal_5824.png">
+        <img src="css/images/logo.jpg">
     </a>
 
     <a class="phone" href="tel:+37255555555">(+372) 55555555</a>
 
     <div class="menu">
-        <a href="/viiols" class="button">Vii oma loom siia</a>
+        <a href="/viiols" class="button" th:text="#{vii-ols}"></a>
     </div>
 </div>
 
 <div class="input">
     <form method="post">
-        Liik: <input type="text" name="liik"  required minlength="3" maxlength="10"><br/><br/>
-        Vanus: <input type="number" name="vanus" min="1" max="50"><br/><br/>
-        Linn: <input type="text" name="linn" required minlength="3" maxlength="10"><br/><br/>
+        <p th:text="#{liik}"></p><input type="text" name="liik"  required minlength="3" maxlength="10"><br/><br/>
+        <p th:text="#{vanus}"></p><input type="number" name="vanus" min="1" max="50"><br/><br/>
+        <p th:text="#{linn}"></p><input type="text" name="linn" required minlength="3" maxlength="10"><br/><br/>
         <input type="submit" value="Submit" onclick="outputrequest()"/>
     </form>
 </div>

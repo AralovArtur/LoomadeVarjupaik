@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org"
+      th:lang="#{lang-code}">
 <head>
     <meta charset="UTF-8">
     <title>Loomad varjupaigas</title>
@@ -8,11 +9,11 @@
 <body>
 <div class="header">
     <a class="logo" href="/avaleht" title="Avaleht">
-        <img src="https://cdn.icon-icons.com/icons2/38/PNG/512/sheep_animal_5824.png">
+        <img src="css/images/logo.jpg">
     </a>
     <a class="phone" href="tel:+37255555555">(+372) 55555555</a>
     <div class="menu">
-        <a href="/loomadvp" class="button">Loomad varjupaigas</a>
+        <a href="/loomadvp" class="button" th:text="#{loomad-varjupaigas}"></a>
     </div>
 </div><br/><br/><br/>
 <div class="list">

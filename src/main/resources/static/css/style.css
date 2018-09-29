@@ -15,7 +15,8 @@ body {
 
 /*logo vaiksemaks muutmine*/
 .header .logo img {
-    width: 50%;
+    width: 75%;
+    height: 75%;
 }
 
 .header .phone {

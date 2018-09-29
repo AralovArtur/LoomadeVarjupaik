@@ -22,11 +22,16 @@ public class VarjupaikController {
         this.animalRepository = animalRepository;
     }
 
-    @GetMapping("/loomad")
+    @GetMapping(path = "/")
+    public String getHome() {
+        return "index";
+    }
+
+    /*@GetMapping("/loomad")
     public String showAllAnimals(Model model) {
         model.addAttribute("loomad", animalRepository.findAll());
         return "all";
-    }
+    }*/
 
     @RequestMapping(path = "/loomadvp", method = RequestMethod.GET)
     public String showAllLoomad(Model model) {
