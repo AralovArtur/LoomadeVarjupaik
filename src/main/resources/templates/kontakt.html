@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Kontakt</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
 <div class="header">
@@ -16,5 +17,11 @@
         <a href="/kontakt" class="button" th:text="#{kontakt}"></a>
     </div>
 </div>
+
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZqigifFy7McwXTsVmsQBUj1ctaysu6OY&callback=initMap">
+</script>
 </body>
 </html>

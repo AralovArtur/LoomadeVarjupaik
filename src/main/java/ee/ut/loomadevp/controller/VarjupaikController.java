@@ -27,12 +27,6 @@ public class VarjupaikController {
         return "index";
     }
 
-    /*@GetMapping("/loomad")
-    public String showAllAnimals(Model model) {
-        model.addAttribute("loomad", animalRepository.findAll());
-        return "all";
-    }*/
-
     @RequestMapping(path = "/loomadvp", method = RequestMethod.GET)
     public String showAllLoomad(Model model) {
         model.addAttribute("loomad", animalRepository.findAll());
@@ -51,7 +45,7 @@ public class VarjupaikController {
         model.addAttribute("linn", linn);
         jdbcTemplate.update(sql, new Object[]{liik, vanus, linn});
 
-        return "vii ols reg";
+        return "loomad vp";
     }
 
     @RequestMapping(path = "/avaleht", method = RequestMethod.GET)
