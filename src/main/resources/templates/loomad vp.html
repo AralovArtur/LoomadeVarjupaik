@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--I used data delay code from here: https://www.youtube.com/watch?v=QHi4fUhiSMI-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        .lazy{
+            width: 20%;
+            margin-bottom: 30px;
+        }
+
+    </style>
     <meta charset="UTF-8">
     <title>Loomad varjupaigas</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -15,5 +24,38 @@
         <a href="/loomadvp" class="button">Loomad varjupaigas</a>
     </div>
 </div>
+
+<img class="lazy" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" data-src="https://www.guidedogs.org/wp-content/uploads/2018/01/Mobile.jpg"><br>
+<img class="lazy" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" data-src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Common-dog-behaviors-explained.jpg?itok=FSzwbBoi"><br>
+<img class="lazy" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" data-src="http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"><br>
+<img class="lazy" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" data-src="https://www.natgeokids.com/wp-content/uploads/2017/02/giraffe-facts-1.jpg"><br>
+<img class="lazy" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" data-src="https://parade.com/wp-content/uploads/2018/02/Hippo-Day-2018.jpg"><br>
+<img class="lazy" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" data-src="https://knowledgenuts.com/wp-content/uploads/2014/08/78740168.jpg"><br>
+<img class="lazy" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" data-src="http://www.sciencemag.org/sites/default/files/styles/article_main_large/public/images/cc_iStock_24626120_LARGE_16x9.jpg?itok=A6Fs_Kf4"><br>
+
+<script>
+    window.onscroll = function (ev) {
+        lazyload();
+    };
+    function lazyload() {
+        var lazyimage = document.getElementsByClassName('lazy');
+        for (var i=0;i<lazyimage.length;i++){
+            if (elementInViewport(lazyimage[i])){
+                lazyimage[i].setAttribute('src',lazyimage[i].getAttribute('data-src'))
+            }
+        }
+
+    }
+    function elementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >=0 &&
+            rect.left >=0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+
+    }
+</script>
 </body>
 </html>
