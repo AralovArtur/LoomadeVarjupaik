@@ -15,7 +15,8 @@ body {
 
 /*logo vaiksemaks muutmine*/
 .header .logo img {
-    width: 50%;
+    width: 75%;
+    height: 75%;
 }
 
 .header .phone {
@@ -88,3 +89,18 @@ body {
     padding: 10px;
 }
 
+<<<<<<< HEAD
+=======
+.list {
+    background-color: ghostwhite;
+    margin: auto;
+    border: 3px solid darkslateblue;
+    padding: 10px;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+}
+>>>>>>> refs/remotes/origin/master

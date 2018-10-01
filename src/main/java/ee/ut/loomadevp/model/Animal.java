@@ -30,10 +30,8 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "liik='" + liik + '\'' +
+        return "liik='" + liik + '\'' +
                 ", vanus=" + vanus +
-                ", linn='" + linn + '\'' +
-                '}';
+                ", linn='" + linn + '\'';
     }
 }

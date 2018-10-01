@@ -22,10 +22,15 @@ public class VarjupaikController {
         this.animalRepository = animalRepository;
     }
 
-    @GetMapping("/loomad")
-    public String showAllAnimals(Model model) {
+    @GetMapping(path = "/")
+    public String getHome() {
+        return "index";
+    }
+
+    @RequestMapping(path = "/loomadvp", method = RequestMethod.GET)
+    public String showAllLoomad(Model model) {
         model.addAttribute("loomad", animalRepository.findAll());
-        return "all";
+        return "loomad vp";
     }
 
     @RequestMapping(path = "/viiols", method = RequestMethod.POST)
@@ -40,17 +45,12 @@ public class VarjupaikController {
         model.addAttribute("linn", linn);
         jdbcTemplate.update(sql, new Object[]{liik, vanus, linn});
 
-        return "vii ols reg";
+        return "loomad vp";
     }
 
     @RequestMapping(path = "/avaleht", method = RequestMethod.GET)
     public String avaleht() {
         return "index";
-    }
-
-    @RequestMapping(path = "/loomadvp", method = RequestMethod.GET)
-    public String loomadVP() {
-        return "loomad vp";
     }
 
     @RequestMapping(path = "/viiols", method = RequestMethod.GET)

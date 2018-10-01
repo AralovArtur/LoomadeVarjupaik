@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      th:lang="#{lang-code}">
 <head>
 
     <meta charset="UTF-8">
     <title>Kontakt</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
 <div class="header">
     <a class="logo" href="/avaleht" title="Avaleht">
-        <img src="https://cdn.icon-icons.com/icons2/38/PNG/512/sheep_animal_5824.png">
+        <img src="css/images/logo.jpg">
     </a>
     <a class="phone" href="tel:+37255555555">(+372) 55555555</a>
     <div class="menu">
-        <a href="/kontakt" class="button">Kontakt</a>
+        <a href="/kontakt" class="button" th:text="#{kontakt}"></a>
     </div>
 
 </div>
 
+<<<<<<< HEAD
+=======
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZqigifFy7McwXTsVmsQBUj1ctaysu6OY&callback=initMap">
+</script>
+>>>>>>> refs/remotes/origin/master
 </body>
 </html>
 
