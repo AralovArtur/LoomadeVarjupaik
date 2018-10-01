@@ -3,6 +3,7 @@ package ee.ut.loomadevp;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
@@ -27,5 +28,16 @@ public class MvcConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
+    }
+
+//     регистр контроллеров, который отвечает за отображение шаблонов
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/avaleht").setViewName("index");
+        registry.addViewController("/login").setViewName("login n");
+        registry.addViewController("/loomadvp").setViewName("loomad_vp");
+        registry.addViewController("/viiols").setViewName("vii ols");
+        registry.addViewController("/viiolsreg").setViewName("vii ols reg");
+        registry.addViewController("/").setViewName("index");
+        registry.addViewController("/kontakt").setViewName("kontakt");
     }
 }
