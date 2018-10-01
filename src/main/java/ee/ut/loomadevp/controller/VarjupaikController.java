@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -30,7 +31,7 @@ public class VarjupaikController {
     @RequestMapping(path = "/loomadvp", method = RequestMethod.GET)
     public String showAllLoomad(Model model) {
         model.addAttribute("loomad", animalRepository.findAll());
-        return "loomad vp";
+        return "loomad_vp";
     }
 
     @RequestMapping(path = "/viiols", method = RequestMethod.POST)
