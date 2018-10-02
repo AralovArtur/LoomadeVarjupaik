@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -46,7 +45,7 @@ public class VarjupaikController {
         model.addAttribute("linn", linn);
         jdbcTemplate.update(sql, new Object[]{liik, vanus, linn});
 
-        return "loomad vp";
+        return "loomad_vp";
     }
 
     @RequestMapping(path = "/avaleht", method = RequestMethod.GET)
@@ -56,7 +55,7 @@ public class VarjupaikController {
 
     @RequestMapping(path = "/viiols", method = RequestMethod.GET)
     public String viiOLS() {
-        return "vii ols";
+        return "vii_ols";
     }
 
     @RequestMapping(path = "/kontakt", method = RequestMethod.GET)

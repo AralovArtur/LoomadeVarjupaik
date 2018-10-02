@@ -33,9 +33,9 @@ public class MvcConfiguration implements WebMvcConfigurer {
 //     регистр контроллеров, который отвечает за отображение шаблонов
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/avaleht").setViewName("index");
-        registry.addViewController("/login").setViewName("login n");
+        registry.addViewController("/login").setViewName("login");
         registry.addViewController("/loomadvp").setViewName("loomad_vp");
-        registry.addViewController("/viiols").setViewName("vii ols");
+        registry.addViewController("/viiols").setViewName("vii_ols");
         registry.addViewController("/viiolsreg").setViewName("vii ols reg");
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/kontakt").setViewName("kontakt");
