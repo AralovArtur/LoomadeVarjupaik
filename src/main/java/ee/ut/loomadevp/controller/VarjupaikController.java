@@ -48,10 +48,10 @@ public class VarjupaikController {
         return "loomad_vp";
     }
 
-    @RequestMapping(path = "/avaleht", method = RequestMethod.GET)
+    /*@RequestMapping(path = "/", method = RequestMethod.GET)
     public String avaleht() {
         return "index";
-    }
+    }*/
 
     @RequestMapping(path = "/viiols", method = RequestMethod.GET)
     public String viiOLS() {
