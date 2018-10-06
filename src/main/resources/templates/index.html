@@ -30,5 +30,33 @@
     <h3 th:text="#{tekst-meist}">(vt. <a href="kontakt.html" class="button">Kontakt</a>)</h3>
 </div>
 
+<div class="jumbotron">
+    <h1>Liitu uudiskirjaga</h1>
+    <p>Ole kursis värskemate uudiste ja uuendustega!</p>
+    <form method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="sonum" name="sonum" placeholder="Sõnum">
+            </div>
+            <div class="form-group col-md-6">
+                <input type="email" class="form-control" id="email" name="email" aria-label="Email" placeholder="Email">
+            </div>
+        </div>
+
+        <p><button type="submit" class="btn btn-lg btn-success">Saada</button></p>
+    </form>
+
+</div>
+
+<div class="rowmarketing" th:each="i : ${#numbers.sequence(0, uudiskirjad.size(), 2)}"> //index.html
+    <div class="col-lg-6" th:if="${i < uudiskirjad.size()}">
+        <p th:text="${'Email: ' + uudiskirjad.get(i).getEmail()}"></p>
+        <p th:text="${'Sonum: ' + uudiskirjad.get(i).getSonum()}"></p>
+    </div>
+    <div class="col-lg-6" th:if="${i + 1 < uudiskirjad.size()}">
+        <p th:text="${'Email: ' + uudiskirjad.get(i + 1).getEmail()}"></p>
+        <p th:text="${'Sonum: ' + uudiskirjad.get(i + 1).getSonum()}"></p>
+    </div>
+</div>
 </body>
 </html>
