@@ -48,7 +48,7 @@
 
 </div>
 
-<div class="rowmarketing" th:each="i : ${#numbers.sequence(0, uudiskirjad.size(), 2)}"> //index.html
+<div class="rowmarketing" th:each="i : ${#numbers.sequence(0, uudiskirjad.size(), 2)}">
     <div class="col-lg-6" th:if="${i < uudiskirjad.size()}">
         <p th:text="${'Email: ' + uudiskirjad.get(i).getEmail()}"></p>
         <p th:text="${'Sonum: ' + uudiskirjad.get(i).getSonum()}"></p>
