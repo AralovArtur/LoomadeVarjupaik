@@ -40,7 +40,7 @@ public class UudiskirjaController {
         // save new entity
         uudiskirjaRepository.save(entity);
 
-        messagingTemplate.convertAndSend("/topic/subscriptions", subscriptionDTO);
+        messagingTemplate.convertAndSend("index", subscriptionDTO);
 
         // redirect to home page
         return "redirect:/";
