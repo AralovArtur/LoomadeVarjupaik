@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -15,17 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 public class VarjupaikController {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-
     private final AnimalRepository animalRepository;
 
     public VarjupaikController(AnimalRepository animalRepository) {
         this.animalRepository = animalRepository;
     }
-
-    /*@GetMapping(path = "/")
-    public String getHome() {
-        return "index";
-    }*/
 
     @RequestMapping(path = "/loomadvp", method = RequestMethod.GET)
     public String showAllLoomad(Model model) {
