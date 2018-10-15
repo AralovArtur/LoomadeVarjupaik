@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SmartID Login</title>
+    <title>SmartID</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
 <div class="header">
@@ -19,10 +18,18 @@
     </div>
 </div>
 
-<div class="input">
-    <center><h1>Logi sisse</h1></center>
-    <input type="text" class="form-control" name="countryCode" placeholder="EE">
-    <input type="text" class="form-control" name="countryCode" placeholder="XXXXXXXXXXX">
-</div>
+<form method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="EE">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="email" class="form-control" id="nationalIdentityNumber" name="nationalIdentityNumber"
+                   aria-label="E-mail" placeholder="XXXXXXXXXXX">
+        </div>
+    </div>
+
+    <p><button type="submit" class="btn btn-lg btn-success">Start Smart-ID</button></p>
+</form>
 </body>
 </html>

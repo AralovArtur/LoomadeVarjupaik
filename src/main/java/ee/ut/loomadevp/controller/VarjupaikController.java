@@ -55,4 +55,9 @@ public class VarjupaikController {
     public String login() {
         return "login";
     }
+
+    @RequestMapping(path = "/smart-id/login", method = RequestMethod.GET)
+    public String smartID() {
+        return "smartid/login";
+    }
 }
