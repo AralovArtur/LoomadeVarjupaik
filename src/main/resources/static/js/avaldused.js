@@ -12,9 +12,9 @@ $(document).ready(function () {
 function ajaxPost(){
     //Prepare form data
     var formData = {
-        liik: $("#name").val(),
-        vanus: $("#tag").val(),
-        linn: $("#description").val(),
+        liik: $("#liik").val(),
+        vanus: $("#vanus").val(),
+        linn: $("#linn").val(),
     };
 
     //DO POST
@@ -22,7 +22,7 @@ function ajaxPost(){
     $.ajax({
         type : "POST",
         contentType : "application/json",
-        url : window.location,
+        url : window.location + "/save",
         data : JSON.stringify(formData),
         dataType : 'html',
         success : function(data){

@@ -38,7 +38,7 @@ public class VarjupaikController {
         model.addAttribute("linn", linn);
         jdbcTemplate.update(sql, new Object[]{liik, vanus, linn});
 
-        return "loomad_vp";
+        return "vii_ols";
     }
 
     @RequestMapping(path = "/viiols", method = RequestMethod.GET)
