@@ -1,6 +1,7 @@
 package ee.ut.loomadevp.controller;
 
 import ee.ut.loomadevp.model.Animal;
+import ee.ut.loomadevp.model.AnimalDTO;
 import ee.ut.loomadevp.repository.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +14,7 @@ public class AvalduseRestController {
     private AnimalRepository animalRepository;
 
     @PostMapping("/viiols/save")
-    public Animal postProduct(@RequestBody Animal animal) {
+    public AnimalDTO postProduct(@RequestBody AnimalDTO animal) {
         animalRepository.addAnimal(animal.getLiik(), animal.getVanus(), animal.getLinn());
 
         return animal;
