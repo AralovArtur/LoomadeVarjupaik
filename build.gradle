@@ -48,4 +48,7 @@ dependencies {
     // Smart-ID client
     compile("ee.sk.smartid:smart-id-java-client:1.0")
     compile("org.glassfish.jersey.inject:jersey-hk2:2.26")
+
+    // Email notification dependencies
+    compile('org.springframework.boot:spring-boot-starter-mail')
 }
