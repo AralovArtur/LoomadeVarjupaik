@@ -15,5 +15,4 @@ public class SmartIdClientConfig {
         client.setHostUrl("https://sid.demo.sk.ee/smart-id-rp/v1/");
         return client;
     }
-
 }
