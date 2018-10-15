@@ -21,10 +21,10 @@
 </div>
 
 <div class="input">
-    <form method="post">
-        <p th:text="#{liik}"></p><input type="text" name="liik"  required minlength="3" maxlength="10"><br/><br/>
-        <p th:text="#{vanus}"></p><input type="number" name="vanus" min="1" max="50"><br/><br/>
-        <p th:text="#{linn}"></p><input type="text" name="linn" required minlength="3" maxlength="10"><br/><br/>
+    <form id="lisaAvaldus" method="post">
+        <p th:text="#{liik}"></p><input type="text" id="liik" name="liik"  required minlength="3" maxlength="10"><br/><br/>
+        <p th:text="#{vanus}"></p><input type="number" id="vanus" name="vanus" min="1" max="50"><br/><br/>
+        <p th:text="#{linn}"></p><input type="text" id="linn" name="linn" required minlength="3" maxlength="10"><br/><br/>
         <input type="submit" value="Submit" onclick="outputrequest()"/>
     </form>
 </div>
