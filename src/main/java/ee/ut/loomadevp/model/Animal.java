@@ -1,15 +1,10 @@
 package ee.ut.loomadevp.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Getter
-@Setter
 @Table(name = "loomad")
 
 public class Animal {
