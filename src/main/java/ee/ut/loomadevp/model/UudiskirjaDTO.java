@@ -1,4 +1,4 @@
-package ee.ut.loomadevp.uudiskirjad;
+package ee.ut.loomadevp.model;
 
 public class UudiskirjaDTO {
     private String email;

@@ -1,4 +1,4 @@
-package ee.ut.loomadevp.uudiskirjad;
+package ee.ut.loomadevp.model;
 
 import jdk.nashorn.internal.objects.annotations.Getter;
 

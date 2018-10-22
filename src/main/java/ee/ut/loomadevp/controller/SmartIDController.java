@@ -1,10 +1,12 @@
-package ee.ut.loomadevp.smartid;
+package ee.ut.loomadevp.controller;
 
 import ee.sk.smartid.*;
 import ee.sk.smartid.exception.SmartIdException;
 import ee.sk.smartid.exception.UserAccountNotFoundException;
 import ee.sk.smartid.exception.UserRefusedException;
 import ee.sk.smartid.rest.dao.NationalIdentity;
+import ee.ut.loomadevp.smartid.SmartIdAuthenticationToken;
+import ee.ut.loomadevp.smartid.Verification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;

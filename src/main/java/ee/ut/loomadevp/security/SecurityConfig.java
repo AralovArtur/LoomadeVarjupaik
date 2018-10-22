@@ -34,10 +34,10 @@ import java.util.stream.Stream;
 @Configuration
 @EnableWebSecurity
 @PropertySource("classpath:application.properties")
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final Environment environment;
 
-    public SecurityConfiguration(Environment environment) {
+    public SecurityConfig(Environment environment) {
         this.environment = environment;
     }
 
