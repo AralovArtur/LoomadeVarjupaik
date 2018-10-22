@@ -3,7 +3,6 @@ package ee.ut.loomadevp.model;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
-
 @Entity
 @Table(name = "loomad")
 

@@ -63,7 +63,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    .antMatchers("/", "/user", "/oauth_login", "/login", "/signup").permitAll()
+                    .antMatchers("/", "/user", "/oauth_login", "/login", "/signup", "/smart-id/login").permitAll()
                     .antMatchers("/templates/**").hasAuthority("ADMIN").anyRequest()
                 .authenticated().and().csrf().disable()
                 .formLogin()
@@ -83,7 +83,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().rememberMe()
                 .tokenRepository(persistentTokenRepository())
                 .tokenValiditySeconds(60*60)
-                .and().exceptionHandling().accessDeniedPage("/access_denied");
+                .and().exceptionHandling().accessDeniedPage("/access_denied")
+                .and()
+                .formLogin().loginPage("/smart-id/login");
     }
 
     @Override

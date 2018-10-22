@@ -21,10 +21,9 @@ public class SmartIDController {
     private SmartIdClient smartIdClient;
 
     @Autowired
-    public SmartIDController(@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection") SmartIdClient smartIdClient) {
+    SmartIDController(SmartIdClient smartIdClient) {
         this.smartIdClient = smartIdClient;
     }
-
 
     @PostMapping(value = "/start")
     public Verification startAuthentication(@RequestBody NationalIdentity nationalIdentity, HttpSession httpSession) {
