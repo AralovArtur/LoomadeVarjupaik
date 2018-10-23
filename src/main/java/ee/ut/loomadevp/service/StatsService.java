@@ -6,6 +6,8 @@ import eu.bitwalker.useragentutils.UserAgent;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Calendar;
+import java.util.Date;
 
 @Service
 public class StatsService {
@@ -27,6 +29,17 @@ public class StatsService {
         stats.setBrowser(browser);
         stats.setOperatingSystem(operatingSystem);
 
-        statsRepository.save(stats);
+        stats.setDate(new Date());
+
+        if (!statsRepository.existsStatsByIpAndDateAfter(remoteAddr, yesterday())) {
+            statsRepository.save(stats);
+        }
+
+    }
+
+    private Date yesterday() {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, -1);
+        return cal.getTime();
     }
 }

@@ -32,7 +32,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.security:spring-security-test')
-    compileOnly('org.projectlombok:lombok:1.16.20')
+    compileOnly('org.projectlombok:lombok')
 
     //Analytics
     compile('com.github.theborakompanioni:spring-useragentutils:1.1.1')
