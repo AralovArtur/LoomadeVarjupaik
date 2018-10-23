@@ -63,7 +63,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    .antMatchers("/", "/user", "/oauth_login", "/login", "/signup", "/smart-id/login").permitAll()
+                .antMatchers("/**").permitAll()
+                .antMatchers("/", "/user", "/oauth_login", "/login", "/signup", "/smart-id/login").permitAll()
                     .antMatchers("/templates/**").hasAuthority("ADMIN").anyRequest()
                 .authenticated().and().csrf().disable()
                 .formLogin()
