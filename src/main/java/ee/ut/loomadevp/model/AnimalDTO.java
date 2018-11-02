@@ -8,9 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
+import org.springframework.web.multipart.MultipartFile;
 
-@Getter
 @Setter
+@Getter
 public class AnimalDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -27,7 +28,8 @@ public class AnimalDTO {
     @NotNull
     private String linn;
 
-    @Override
+    private MultipartFile avatarImage;
+
     public String toString() {
         return "liik='" + liik + '\'' +
                 ", vanus=" + vanus +
