@@ -19,4 +19,15 @@ public class Stats {
     private String browser;
     private String operatingSystem;
     private Date date;
+
+    @Override
+    public String toString() {
+        return "Stats{" +
+                "id=" + id +
+                ", ip='" + ip + '\'' +
+                ", browser='" + browser + '\'' +
+                ", operatingSystem='" + operatingSystem + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }

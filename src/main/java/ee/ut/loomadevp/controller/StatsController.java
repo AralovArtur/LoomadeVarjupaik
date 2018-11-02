@@ -1,12 +1,13 @@
 package ee.ut.loomadevp.controller;
 
 import ee.ut.loomadevp.repository.StatsRepository;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class StatsController {
     private final StatsRepository statsRepository;
 
