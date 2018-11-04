@@ -30,9 +30,12 @@ public class AnimalDTO {
 
     private MultipartFile avatarImage;
 
+    @Override
     public String toString() {
-        return "liik='" + liik + '\'' +
+        return "AnimalDTO{" +
+                "liik='" + liik + '\'' +
                 ", vanus=" + vanus +
-                ", linn='" + linn + '\'';
+                ", linn='" + linn + '\'' +
+                '}';
     }
 }
