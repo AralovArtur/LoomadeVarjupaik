@@ -83,6 +83,28 @@ body {
     color: darkslateblue;
 }
 
+.soovitus {
+    background-color: ghostwhite;
+    margin: auto;
+    width: 60%;
+    border: 3px solid darkslateblue;
+    padding: 10px;
+    top: 300px;
+}
+
+.soovitus h1 {
+    color: darkslateblue;
+    text-align: center;
+}
+
+.soovitus h2 {
+    color: darkslateblue;
+}
+
+.soovitus ul {
+    color: darkslateblue;
+}
+
 .input {
     background-color: ghostwhite;
     margin: auto;
