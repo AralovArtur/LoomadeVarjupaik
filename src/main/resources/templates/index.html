@@ -15,10 +15,10 @@
     <a class="phone" href="tel:+37255555555">(+372) 55555555</a>
     <a class="phone" th:href="@{/oauth2/authorization/google}">Google Login</a>
     <a class="phone" href="/login">Login</a>
-    <a class="phone" th:href="@{/logout}">Sign out</a>
+    <a id="sign_out" class="phone" th:href="@{/logout}">Sign out</a>
     <a class="phone" href="/smart-id/login">SmartID</a>
-    <a class="en" href="/?lang=en" th:text="#{lang-en}"></a>
-    <a class="en" href="/?lang=et" th:text="#{lang-et}"></a>
+    <a id="en" class="en" href="/?lang=en" th:text="#{lang-en}"></a>
+    <a id="et" class="en" href="/?lang=et" th:text="#{lang-et}"></a>
 
     <div class="menu">
         <a href="/loomadvp" class="button" th:text="#{loomad-varjupaigas}"></a>
@@ -30,13 +30,13 @@
 
 
 <div class="meist">
-    <h1 th:text="#{meist}"></h1>
+    <h1 id="meist" th:text="#{meist}"></h1>
     <h2 th:text="#{tekst-meist}">(vt. <a href="kontakt.html" class="button">Kontakt</a>)</h2>
 </div>
 
 <div class="jumbotron">
-    <h1>Liitu uudiskirjaga</h1>
-    <p>Ole kursis värskemate uudiste ja uuendustega!</p>
+    <h1 th:text="#{liitu-uudiskirjaga}"></h1>
+    <p th:text="#{ole-kursis}"></p>
     <form method="post">
         <div class="form-row">
             <div class="form-group col-md-6">

@@ -55,4 +55,9 @@ dependencies {
 
     // Email notification dependencies
     compile('org.springframework.boot:spring-boot-starter-mail')
+    
+    // Testing
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.security:spring-security-test')
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
 }
