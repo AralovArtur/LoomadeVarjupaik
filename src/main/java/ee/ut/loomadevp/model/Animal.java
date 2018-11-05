@@ -28,6 +28,9 @@ public class Animal {
     @NotNull
     private String linn;
 
+    @NotNull
+    private String pilt;
+
     @Override
     public String toString() {
         return "liik='" + liik + '\'' +

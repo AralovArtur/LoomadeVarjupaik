@@ -15,7 +15,7 @@ public class AvalduseRestController {
 
     @PostMapping("/viiols/save")
     public AnimalDTO postProduct(@RequestBody AnimalDTO animal) {
-        animalRepository.addAnimal(animal.getLiik(), animal.getVanus(), animal.getLinn());
+        animalRepository.addAnimal(animal.getLiik(), animal.getVanus(), animal.getLinn(), String.valueOf(animal.getAvatarImage()));
 
         return animal;
     }

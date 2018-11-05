@@ -15,6 +15,6 @@ public interface AnimalRepository extends JpaRepository<Animal, Long> {
 
     @Modifying
     @Transactional
-    @Query(value="INSERT INTO loomad (liik, vanus, linn) VALUES (?, ?, ?)", nativeQuery = true)
-    void addAnimal(@Param("liik") String liik, @Param("vanus") int vanus, @Param("linn") String linn);
+    @Query(value="INSERT INTO loomad (liik, vanus, linn, pilt) VALUES (?, ?, ?, ?)", nativeQuery = true)
+    void addAnimal(@Param("liik") String liik, @Param("vanus") int vanus, @Param("linn") String linn, @Param("pilt") String pilt);
 }
