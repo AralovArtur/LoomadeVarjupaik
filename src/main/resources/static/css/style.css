@@ -152,3 +152,17 @@ body {
 .col-lg-6 p {
     color: darkslateblue;
 }
+
+.anneta {
+    background-color: ghostwhite;
+    margin: auto;
+    width: 60%;
+    border: 3px solid darkslateblue;
+    padding: 10px;
+    top: 300px;
+}
+
+.anneta h1{
+    color: darkslateblue;
+    text-align: center;
+}

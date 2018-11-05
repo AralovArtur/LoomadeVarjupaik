@@ -47,6 +47,14 @@
 </div>
 <script src="js/soovitus.js"></script>
 
+<div class="anneta">
+    <h1>Aita meie varjupaigas elavaid loomi ning anneta</h1>
+    <form>
+        <input type="button" value="ANNETA 15 EUR" onclick="window.location.href='https://payment-test.maksekeskus.ee/pay/1/link.html?shop=f7741ab2-7445-45f9-9af4-0d0408ef1e4c&amount=15&reference=Varjupaik&country=ee&locale=et&return_url=https://loomade-vp.herokuapp.com/&return_method=GET&cancel_url=https://loomade-vp.herokuapp.com/&cancel_method=GET'" />
+        <input type="button" value="ANNETA 50 EUR" onclick="window.location.href='https://payment-test.maksekeskus.ee/pay/1/link.html?shop=f7741ab2-7445-45f9-9af4-0d0408ef1e4c&amount=50&reference=Varjupaik&country=ee&locale=et&return_url=https://loomade-vp.herokuapp.com/&return_method=GET&cancel_url=https://loomade-vp.herokuapp.com/&cancel_method=GET'" />
+    </form>
+</div>
+
 <div class="jumbotron">
     <h1 th:text="#{liitu-uudiskirjaga}"></h1>
     <p th:text="#{ole-kursis}"></p>
