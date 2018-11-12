@@ -19,7 +19,6 @@ import static junit.framework.TestCase.assertEquals;
 @SpringBootTest
 public class LoomadevpApplicationTests {
     private WebDriver driver;
-    private Random random = new Random();
     private String demo = "http://localhost:8080/";
 
     @Before
@@ -50,13 +49,13 @@ public class LoomadevpApplicationTests {
         assertEquals("Meist",
                 driver.findElements(By.tagName("h1")).get(0).getText());
                 assertEquals("Liitu uudiskirjaga",
-                        driver.findElements(By.tagName("h1")).get(1).getText());
+                        driver.findElements(By.tagName("h1")).get(3).getText());
 
         setEngLang();
         assertEquals("About us",
                 driver.findElements(By.tagName("h1")).get(0).getText());
         assertEquals("Join the newsletter",
-                driver.findElements(By.tagName("h1")).get(1).getText());
+                driver.findElements(By.tagName("h1")).get(3).getText());
     }
 
     @Test
