@@ -30,6 +30,38 @@ public class AnimalDTO {
 
     private MultipartFile avatarImage;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getLiik() {
+        return liik;
+    }
+
+    public void setLiik(String liik) {
+        this.liik = liik;
+    }
+
+    public int getVanus() {
+        return vanus;
+    }
+
+    public void setVanus(int vanus) {
+        this.vanus = vanus;
+    }
+
+    public String getLinn() {
+        return linn;
+    }
+
+    public void setLinn(String linn) {
+        this.linn = linn;
+    }
+
     @Override
     public String toString() {
         return "AnimalDTO{" +

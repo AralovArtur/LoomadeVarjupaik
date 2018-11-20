@@ -43,9 +43,8 @@ public class VarjupaikController {
         model.addAttribute("vanus", vanus);
         String linn = animalDTO.getLinn();
         model.addAttribute("linn", linn);
-        String pilt = getImageBase64Format(animalDTO.getAvatarImage());
 
-        jdbcTemplate.update(sql, new Object[]{liik, vanus, linn, pilt});
+        jdbcTemplate.update(sql, new Object[]{liik, vanus, linn});
         return "vii_ols";
     }
 
